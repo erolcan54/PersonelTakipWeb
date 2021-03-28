@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PersonelEkleSayfasi</title>
+</head>
+<body>
+    @using (Html.BeginForm("PersonelEkle", "Home", FormMethod.Post))
+    {
+        <div>
+            Ad Soyad : <input name="AdSoyad" />
+            <br />
+            TCkimlik : <input name="TCKimlik" />
+            <br />
+
+            Departman ID : <input name="DepartmanID" />
+            <input type="submit" value="KAyıt Et" />
+        </div>
+    }
+</body>
+</html>

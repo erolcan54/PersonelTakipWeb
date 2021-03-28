@@ -1,0 +1,47 @@
+﻿@using PersonelTakipWeb.Models
+@model List<Personeller>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @if (Model.Count > 0)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <td>Personel ID</td>
+                    <td>Ad Soyad</td>
+                    <td>Depatman İsmi</td>
+                    <td>TCKimlik</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var personel in Model)
+                {
+                    <tr>
+                        <td>@personel.PersonelID</td>
+                        <td>@personel.AdSoyad</td>
+                        <td>@personel.Departmanlar.DepartmanAdi</td>
+                        <td>@personel.TCKimlik</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    }
+    else
+            {
+                <div>Liste boş</div>
+            }
+
+</body>
+</html>
